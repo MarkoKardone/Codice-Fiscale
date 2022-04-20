@@ -1,12 +1,17 @@
-package com.logic.codfisc;
+package codfisc;
 
-public class Cognome {
+public class Cognome 
+{
+    
     private String cognome;
-    public Cognome(String cognome) {
-        this.cognome = cognome.replaceAll("\\s","").replaceAll("\'", "").replaceAll("è","");
-        cognome = doCognome();
+
+    public Cognome(String cognome) 
+    {
+        cognome = cognome.replaceAll("\\s","").replaceAll("\'", "").replaceAll("è","");
+        this.cognome = doCognome(cognome);
     }
-    private String doCognome() 
+
+    private String doCognome(String cognome) 
     {
         String con = new String();
         String voc = new String();
@@ -30,5 +35,6 @@ public class Cognome {
         car = car.substring(0,3);
         return car;
     }
+    
     public String getCognome() {return cognome;}
 }

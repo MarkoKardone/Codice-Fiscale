@@ -1,11 +1,12 @@
-package com.logic.codfisc;
+package codfisc;
 
 import org.json.simple.*;
 import org.json.simple.parser.*;
 
 import java.io.*;
 
-public class Citta{
+public class Citta
+{
 
     private JSONParser parser = new JSONParser();
     private JSONObject element,singleELement;
@@ -13,7 +14,8 @@ public class Citta{
 
     private String instat,cap,prefisso,provincia,regione,belfiore,abitanti;
 
-    public Citta(String citta) {
+    public Citta(String citta) 
+    {
         this.citta = citta.toLowerCase().replaceAll("\\s","");
         instat = doIstat();
         cap = doCap();
@@ -23,6 +25,7 @@ public class Citta{
         belfiore = doBelfiore();
         abitanti = doAbitanti(); 
     }
+    
     private String doIstat() 
     {
         try (Reader reader = new FileReader("src\\dati.json"))

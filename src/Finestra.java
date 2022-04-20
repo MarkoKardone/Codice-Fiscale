@@ -1,7 +1,10 @@
+
 import javax.swing.*;
 import javax.swing.JSpinner.*;
+
 import java.awt.*;
 import java.util.*;
+
 public class Finestra
 {
     JFrame f = new JFrame("CodiceFiscale");   
