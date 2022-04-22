@@ -6,9 +6,7 @@ import javax.swing.*;
 
 public class Logica implements ActionListener 
 {
-
     JTextField[] texts;
-    JRadioButton sex;
     JSpinner data;
 
     String nome;
